@@ -2,8 +2,7 @@
 <br>
 O codigo .bat mantem o arquivo modeloLoop.py sempre rodando no windows, e se o arquivo parar de rodar ele inicia o arquivo novamente
 <br>
-``` 
-:loop
+`:loop
 tasklist /FI "IMAGENAME eq python.exe" 2>NUL | find /I /N "python.exe">NUL
 if "%ERRORLEVEL%"=="0" (
     echo Python está sendo executado.
@@ -13,5 +12,4 @@ if "%ERRORLEVEL%"=="0" (
 )
 timeout /t 10 /nobreak > NUL
 goto loop
-
-```
+`
